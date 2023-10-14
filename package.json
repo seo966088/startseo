@@ -1,8 +1,8 @@
 {
-"name": "startseo",
-  "version": "1.0.0"
-  "description": "just cyclic jason",
-  "scripts": {
+    "name": "startseo",
+    "version": "1.0.0",
+    "description": "just cyclic jason",
+    "scripts": {
         "build": "echo \"No build specified\" && exit 1",
         "test": "echo \"No test specified\" && exit 1",
         "start": "node index.js"
@@ -11,12 +11,10 @@
         "type": "git",
         "url": "git+https://github.com/seo966088/startseo.git"
     },
-    "author": "",
+    "author": "Your Name",
     "license": "ISC",
     "bugs": {
         "url": "https://github.com/seo966088/startseo/issues"
     },
     "homepage": "https://github.com/seo966088/startseo#readme"
 }
- 
-
