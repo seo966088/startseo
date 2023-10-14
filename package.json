@@ -1,7 +1,7 @@
 {
 "name": "startseo",
   "version": "1.0.0"
-  "description": "",
+  "description": "just cyclic jason",
   "scripts": {
         "build": "echo \"No build specified\" && exit 1",
         "test": "echo \"No test specified\" && exit 1",
