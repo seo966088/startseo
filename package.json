@@ -1,7 +1,7 @@
 {
-   "name": "startseo",
+    "name": "startseo",
     "version": "1.0.0",
-    "description": "",
+    "description": "Backlink creation tool using Puppeteer",
     "scripts": {
         "build": "echo \"No build specified\" && exit 1",
         "test": "echo \"No test specified\" && exit 1",
@@ -16,4 +16,8 @@
     "bugs": {
         "url": "https://github.com/seo966088/startseo/issues"
     },
-    "homepage": "https://github.com/seo966088/startseo#readme"
+    "homepage": "https://github.com/seo966088/startseo#readme",
+    "dependencies": {
+        "puppeteer": "^12.1.0"
+    }
+}
