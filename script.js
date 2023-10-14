@@ -1,28 +1,34 @@
-<!DOCTYPE html>
-<html lang="en">
+function makeBacklinks() {
+    const domain = document.getElementById("domain").value;
+    const websites = document.getElementById("websites").value.split(",");
+    const interval = parseInt(document.getElementById("interval").value, 10) * 60 * 1000; // Convert minutes to milliseconds
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Backlink Maker Tool</title>
-</head>
+    // Function to create backlink on a single website
+    async function createBacklink(website) {
+        // Implement your Puppeteer logic to create backlink on the website.
+        // ...
 
-<body>
-    <h1>Backlink Maker Tool</h1>
-    <label for="domain">Enter Domain:</label>
-    <input type="text" id="domain" placeholder="Enter your domain">
-    <br>
-    <label for="websites">Enter Websites (comma-separated):</label>
-    <input type="text" id="websites" placeholder="Enter websites where backlinks will be created">
-    <br>
-    <label for="interval">Time Interval (in minutes):</label>
-    <input type="number" id="interval" placeholder="Time interval in minutes">
-    <br>
-    <button onclick="makeBacklinks()">Make Backlinks</button>
-    <div id="progress"></div>
-    <div id="result"></div>
+        // Simulate a successful backlink creation (replace this with actual Puppeteer logic).
+        const isSuccess = true;
+        return isSuccess;
+    }
 
-    <script src="script.js"></script>
-</body>
+    async function processWebsites() {
+        for (const website of websites) {
+            const isSuccess = await createBacklink(website.trim());
 
-</html>
+            if (isSuccess) {
+                document.getElementById("progress").innerText = `Backlink created on ${website}`;
+            } else {
+                document.getElementById("progress").innerText = `Failed to create backlink on ${website}`;
+            }
+
+            // Wait for the specified interval before processing the next website.
+            await new Promise(resolve => setTimeout(resolve, interval));
+        }
+
+        document.getElementById("result").innerText = "Backlink creation process completed.";
+    }
+
+    processWebsites();
+}
