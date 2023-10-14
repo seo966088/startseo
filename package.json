@@ -1,0 +1,11 @@
+{
+  "name": "backlink-maker",
+  "version": "1.0.0",
+  "description": "Automated Backlink Maker Tool",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "puppeteer": "^12.1.0"
+  }
+}
